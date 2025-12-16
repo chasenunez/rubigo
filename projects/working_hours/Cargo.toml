@@ -1,0 +1,8 @@
+[package]
+name = "working_hours"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+chrono = "0.4"
+
