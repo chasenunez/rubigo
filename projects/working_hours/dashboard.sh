@@ -25,6 +25,7 @@ while true; do
     echo
 
     printf "\e[32m——————— System Information ———————\e[0m\n"
+    echo    
     printf "\e[32mCyclical Progression:\e[0m [\e[34m$counter c\e[0m] [\e[34m$total_minutes m\e[0m] [\e[34m$fractional_hours h\e[0m]\n"
 
     # 👇 Rust Work Timer Output
@@ -38,11 +39,13 @@ while true; do
     echo
     /bin/echo -n "Internal IP Address: " && ipconfig getifaddr en0
     /bin/echo -n "External IP Address: " && curl -s icanhazip.com
+    echo
     /bin/echo -n "Traffic Out: " && top -l 1 -s 0 | grep Networks | awk '{print $3}' FS=/ | awk '{print $1}'
     /bin/echo -n "Traffic In: " && top -l 1 -s 0 | grep Networks | awk '{print $2}' FS=/ | awk '{print $1}'
     echo
 
     printf "\e[32m————————— Top Processes —————————\e[0m\n"
+    echo
     ps -arcwwwxo "command pid %cpu %mem" | head -11
 
     echo
